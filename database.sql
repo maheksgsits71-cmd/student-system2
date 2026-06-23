@@ -10,3 +10,4 @@ CREATE TABLE students (
   mobile VARCHAR(15),
   branch VARCHAR(50)
 );
+
