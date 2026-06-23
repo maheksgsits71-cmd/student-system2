@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Student Registration System</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+  <h1>Student Registration System</h1>
+  <p class="subtitle">Add and view student records</p>
+
+  <div class="card">
+    <h2>Add New Student</h2>
+    <form id="studentForm">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="e.g. Aryan Sharma" required />
+        <div class="error-text" id="nameError"></div>
+      </div>
+
+      <div>
+        <label for="enrollmentNumber">Enrollment Number</label>
+        <input type="text" id="enrollmentNumber" placeholder="e.g. 0801CS211045" required />
+        <div class="error-text" id="enrollmentError"></div>
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="e.g. student@example.com" required />
+        <div class="error-text" id="emailError"></div>
+      </div>
+
+      <div>
+        <label for="mobileNumber">Mobile Number</label>
+        <input type="text" id="mobileNumber" placeholder="10-digit mobile number" required />
+        <div class="error-text" id="mobileError"></div>
+      </div>
+
+      <div class="full-width">
+        <label for="branch">Branch</label>
+        <select id="branch" required>
+          <option value="">-- Select Branch --</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Information Technology">Information Technology</option>
+          <option value="Electronics & Communication">Electronics & Communication</option>
+          <option value="Electrical Engineering">Electrical Engineering</option>
+          <option value="Mechanical Engineering">Mechanical Engineering</option>
+          <option value="Civil Engineering">Civil Engineering</option>
+          <option value="Other">Other</option>
+        </select>
+        <div class="error-text" id="branchError"></div>
+      </div>
+
+      <button type="submit">Add Student</button>
+    </form>
+    <div id="statusMsg"></div>
+  </div>
+
+  <div class="card">
+    <h2>All Students</h2>
+    <button class="refresh-btn" id="refreshBtn">Refresh</button>
+    <div id="tableWrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Enrollment No.</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Branch</th>
+          </tr>
+        </thead>
+        <tbody id="studentTableBody">
+          <tr><td colspan="5" class="empty-row">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

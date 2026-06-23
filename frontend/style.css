@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 30px 15px;
+  color: #222;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #1a3c6e;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 25px;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #1a3c6e;
+  border-bottom: 2px solid #eef2f7;
+  padding-bottom: 10px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d3d8e0;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #1a73e8;
+}
+
+.error-text {
+  color: #d93025;
+  font-size: 12px;
+  margin-top: 4px;
+  min-height: 14px;
+}
+
+button[type="submit"] {
+  grid-column: 1 / -1;
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #1558b3;
+}
+
+#statusMsg {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 18px;
+}
+
+.success { color: #1e8e3e; }
+.error { color: #d93025; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #f7f9fc;
+  color: #1a3c6e;
+  font-weight: 600;
+}
+
+tr:hover {
+  background: #fafbfd;
+}
+
+.empty-row {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+}
+
+.refresh-btn {
+  background: #eef2f7;
+  color: #1a3c6e;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  float: right;
+  margin-top: -45px;
+}
+
+.refresh-btn:hover {
+  background: #dde6f0;
+}
+
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+}
